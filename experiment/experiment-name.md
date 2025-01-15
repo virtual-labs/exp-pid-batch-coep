@@ -1,1 +1,1 @@
-## Design and develop a P & ID for Batch and Bottle Filling pilot plant
+## Design and develop a P&ID for Batch and Bottle Filling pilot plant

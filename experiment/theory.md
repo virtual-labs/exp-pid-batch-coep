@@ -55,7 +55,7 @@ Field devices that provide an analog output as their signal (analog sensors or t
 4. Temperature Transmitter for Condensate temperature (TT5)
 5. Weight Transmitter (WT)
 
-#### Analog Output
+##### Analog Output
 
 Like analog inputs, analog output interfaces are usually connected to controlling devices through transducers. These transducers amplify, reduce, or change the discrete voltage signal into an analog signal, which in turn, controls the output device. The Analog Output for Batch Process as follows:
 
@@ -68,14 +68,14 @@ The discrete input (DI) system provides the physical connection between the cent
 
 ##### The List of Digital Input  (DI) for Batch Process as follows :
 
-• Conductivity Type Low Level Switch (LSLL1)
-• Conductivity Type High Level Switch (LSHH1)
-• High Level Displacer Switch (LSHH2)
-• Low Level Magnetic Float Switch (LSLL2)
-• High Level Capacitive Switch (LSHH3)
-• Low Level Vibrating Fork Switch (LSLL3)
-• ACK PB
-• Emergency Stop
+- Conductivity Type Low Level Switch (LSLL1)
+- Conductivity Type High Level Switch (LSHH1)
+- High Level Displacer Switch (LSHH2)
+- Low Level Magnetic Float Switch (LSLL2)
+- High Level Capacitive Switch (LSHH3)
+- Low Level Vibrating Fork Switch (LSLL3)
+- ACK PB
+- Emergency Stop
 
 #### Digital Output (DO)
 
@@ -103,18 +103,18 @@ The pilot plant will be used along with the Batch Process Plant that is already 
 
 ##### The Pilot plant consists of :
 
-• Bottle Feeding Station
-• Bottle Inspection Station
-• Linear Transport Station
-• Rotary Transport Station
-• Bottle Sorting and Stacking Station
+- Bottle Feeding Station
+- Bottle Inspection Station
+- Linear Transport Station
+- Rotary Transport Station
+- Bottle Sorting and Stacking Station
 
 #### Bottle Feeding Station
 
 Different Types of packages are available. These packages are randomly picked and placed at the transportation station using an electro-pneumatic pick-and-place arrangement. 
 
 2 liter 10 containers, 
-1 liter 10 containers,
+1 liter 10 containers, 
 and 2 liter 10 containers material SS 304 16 SWG, 12 liter plastic  5 containers.
 
 #### Bottle inspection Station :
