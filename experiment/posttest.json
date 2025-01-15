@@ -2,38 +2,135 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the function of the PLC program in the pilot plant?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To monitor the production process",
+        "b": "To control the flow of materials",
+        "c": "To automate the production process",
+        "d": "To troubleshoot equipment faults"
+		
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of the level sensor in the pilot plant?",
+      "answers": {
+        "a": "To measure the temperature of the product",
+        "b": "To monitor the flow rate of the product",
+        "c": "To detect the level of the product in the tank",
+        "d": "To control the pressure of the product"
       },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens when the pilot plant is in 'Auto' mode?",
+      "answers": {
+        "a": "The plant operates manually",
+        "b": "The plant operates automatically",
+        "c": "The plant is in standby mode",
+        "d": "The plant is shut down"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the function of the solenoid valve in the pilot plant?",
+      "answers": {
+        "a": "To control the flow of air",
+        "b": "To control the flow of product",
+        "c": "To monitor the pressure of the product",
+        "d": "To measure the temperature of the product"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the purpose of the batch recipe in the pilot plant?",
+      "answers": {
+        "a": "To define the sequence of operations",
+        "b": "To specify the ingredients and quantities",
+        "c": "To set the temperature and pressure",
+        "d": "To monitor the production process"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+  
+  {
+      "question": "What happens when the pilot plant detects a fault?",
+      "answers": {
+        "a": "The plant continues to operate normally",
+        "b": "The plant shuts down immediately",
+        "c": "The plant alerts the operator with an alarm",
+        "d": "The plant goes into standby mode"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	
+	
+	
+	{
+      "question": "What is the function of the HMI (Human-Machine Interface) in the pilot plant?",
+      "answers": {
+        "a": "To monitor the production process",
+        "b": "To control the flow of materials",
+        "c": "To troubleshoot equipment faults",
+        "d": "To display alarms and warnings"
+		
+      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the purpose of the cleaning-in-place (CIP) system in the pilot plant?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To clean the equipment after production",
+        "b": "To sanitize the equipment before production",
+        "c": "To sterilize the equipment during production",
+        "d": "To monitor the cleanliness of the equipment"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens when the pilot plant reaches the end of a batch?",
+      "answers": {
+        "a": "The plant shuts down immediately",
+        "b": "The plant alerts the operator with an alarm",
+        "c": "The plant automatically starts the next batch",
+        "d": "The plant goes into standby mode"
       },
+     
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the benefit of using a PLC-based control system in the pilot plant?",
+      "answers": {
+        "a": "Increased production capacity",
+        "b": "Improved product quality",
+        "c": "Reduced labor costs",
+        "d": "Increased flexibility and accuracy"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
+  
+  
   ]
 }
