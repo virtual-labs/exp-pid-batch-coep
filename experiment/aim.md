@@ -1,6 +1,6 @@
 #### Aim
 
-To automate the batch and bottle filling plant as per customer requirements
+ To automate the batch and bottle filling plant as per customer requirements
  
 #### Objectives
 
