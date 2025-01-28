@@ -137,7 +137,7 @@ function BatchProcessBottleFillingPreQuestion()
 			if(flag==1){
 					$("#Selection").html('');
 					$("#diagram").html('');
-					BatchProcessBottleFillingMimic();
+					BatchProcessBottleFillingPipingMimic();
 			}
 				
 			});			
