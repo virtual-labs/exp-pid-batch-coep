@@ -52,7 +52,7 @@ function BatchProcessBottleFillingPiping()
 	var TotalComp;
 	
 	
-	$("#Header").html("	<center><span>BATCH PROCESS & BOTTLE FILLING - VESSEL & PIPING DIAGRAM</span></center>");
+	$("#Header").html("	<center><span>BATCH PROCESS & BOTTLE FILLING - PIPING DIAGRAM</span></center>");
 	htm=''
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
 		+'<center><span >CONFIGURATION</span></center>'
@@ -62,63 +62,63 @@ function BatchProcessBottleFillingPiping()
 	
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of jacketted vessels</b></label>'
-		+' <input class="form-select" id="jacketVessels" type="number" min="0" max="5" value="0" tabindex="1" ></input>'
+		+' <input class="form-select" id="jacketVessels" type="number" min="0" max="10" value="0" tabindex="1" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of Vessels(1 ltr)</b></label>'
-		+' <input class="form-select" id="vessel1" type="number" min="0" max="5" value="0" tabindex="2" ></input>'
+		+' <input class="form-select" id="vessel1" type="number" min="0" max="10" value="0" tabindex="2" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of Vessels(1.5 ltr)</b></label>'
-		+' <input class="form-select" id="vessel1half" type="number" min="0" max="5" value="0" tabindex="3" ></input>'
+		+' <input class="form-select" id="vessel1half" type="number" min="0" max="10" value="0" tabindex="3" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of Vessels(3 ltr)</b></label>'
-		+' <input class="form-select" id="vessel3" type="number" min="0" max="5" value="0" tabindex="4" ></input>'
+		+' <input class="form-select" id="vessel3" type="number" min="0" max="10" value="0" tabindex="4" ></input>'
 		+'</div>'
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of solenoid valves</b></label>'
-		+' <input class="form-select" id="solenoidValve" type="number" min="0" max="5" value="0" tabindex="5" ></input>'
+		+' <input class="form-select" id="solenoidValve" type="number" min="0" max="10" value="0" tabindex="5" ></input>'
 		+'</div>'
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of control valves</b></label>'
-		+' <input class="form-select" id="controlValves" type="number" min="0" max="5" value="0" tabindex="6" ></input>'
+		+' <input class="form-select" id="controlValves" type="number" min="0" max="10" value="0" tabindex="6" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of angle valves</b></label>'
-		+' <input class="form-select" id="angleValves" type="number" min="0" max="5" value="0" tabindex="7" ></input>'
+		+' <input class="form-select" id="angleValves" type="number" min="0" max="10" value="0" tabindex="7" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of tanks</b></label>'
-		+' <input class="form-select" id="tanks" type="number" min="0" max="5" value="0" tabindex="8" ></input>'
+		+' <input class="form-select" id="tanks" type="number" min="0" max="10" value="0" tabindex="8" ></input>'
 		+'</div>' 
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of pumps</b></label>'
-		+' <input class="form-select" id="pumps"  type="number" min="0" max="5" value="0" tabindex="9" ></input>'
+		+' <input class="form-select" id="pumps"  type="number" min="0" max="10" value="0" tabindex="9" ></input>'
 		+'</div>'
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of racks</b></label>'
-		+' <input class="form-select" id="racks" type="number" min="0" max="5" value="0" tabindex="10" ></input>'
+		+' <input class="form-select" id="racks" type="number" min="0" max="10" value="0" tabindex="10" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of belts</b></label>'
-		+' <input class="form-select" id="belts" type="number" min="0" max="5" value="0" tabindex="11" ></input>'
+		+' <input class="form-select" id="belts" type="number" min="0" max="10" value="0" tabindex="11" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of arams</b></label>'
-		+' <input class="form-select" id="arams" type="number" min="0" max="5" value="0" tabindex="12" ></input>'
+		+' <input class="form-select" id="arams" type="number" min="0" max="10" value="0" tabindex="12" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of motors</b></label>'
-		+' <input class="form-select" id="motors" type="number" min="0" max="5" value="0" tabindex="13" ></input>'
+		+' <input class="form-select" id="motors" type="number" min="0" max="10" value="0" tabindex="13" ></input>'
 		+'</div>'
 		
 		+'<div class="col-sm-12">'
 		+'<label><b>Enter no of rotary Table</b></label>'
-		+' <input class="form-select" id="rotaryTable" type="number" min="0" max="5" value="0" tabindex="14" ></input>'
+		+' <input class="form-select" id="rotaryTable" type="number" min="0" max="10" value="0" tabindex="14" ></input>'
 		+'</div>'
 		
 		
@@ -171,25 +171,18 @@ function BatchProcessBottleFillingPiping()
 		+'</div>'
 	$("#Selection").html(htm);
 	htm=''
-		+'<div class="row statement" ><p>The spray drying process is a widely used technique for converting liquid feed into a dry powder form by rapidly drying with a hot gas.'
-		+'This method is commonly used in industries such as food processing, pharmaceuticals, chemicals, and ceramics. The objective'
-		+'of this task is to develop a comprehensive Piping and Instrumentation Diagram (P&ID) for a Spray Drying Process Plant that '
-		+'outlines the necessary equipment, instrumentation, control loops, and piping systems.'
-		+'<br><b> Problem Description</b><br>'
-		+'The spray drying process involves several critical stages such as atomization, drying, powder collection, and gas handling.'
-		+'A well-designed P&ID is required to ensure optimal control, safety, and efficient operation of the plant. The diagram should '
-		+'incorporate the flow of materials, energy, and signals, highlighting all relevant equipment such as pumps, compressors,'
-		+'heat exchangers, filters, and storage vessels, along with the associated instrumentation for monitoring and control.</p>'
-		
-		+'<br><b style="margin-bottom:10px;">The P&ID should include all major and minor process components and systems such as:</b><br>'
-
-		+'<p><span class="subTitle">Feed Preparation System:</span><br> Where liquid feed is prepared and conditioned before entering the spray dryer.'
-		+'<br><span class="subTitle">Atomization System:</span><br> Atomizers or nozzles that break the liquid feed into droplets for drying.'
-		+'<br><span class="subTitle">Drying Chamber:</span><br> A chamber where hot air or gas dries the atomized liquid into fine powder.'
-		+'<br><span class="subTitle">Air Handling System: </span><br>For controlling airflow and temperature inside the drying chamber.'
-		+'<br><span class="subTitle">Powder Recovery and Collection System:</span><br> Cyclones, filters, and receivers used to capture dried particles from the exhaust gas.'
-		+'<br><span class="subTitle">Exhaust Gas Handling System:</span><br> Includes fans, scrubbers, and filtration units to ensure environmental compliance.'
-		+'<br><span class="subTitle">Cooling/Storage: </span><br>Systems for cooling, storing, and packaging the dried product</p></div>'
+	+'<div class="row statement" ><p>A problem statement is a crucial element in designing and developing a pilot plant. '
+		+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
+		+'Heres a general outline to help you define a problem statement for designing and developing a pilot plant:'
+		+'<br><b>Problem Statement:</b> You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot '
+		+'<br><b>A batch reactor with a capacity of 200 Liters Continuous reactor (CSTR) along with a bottle filling to fill  20 bottles of different size to be filled in one hour. Number of ingardients are three. </b>'
+		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new “control and automation” technologies.'
+		+'<br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
+		+'selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
+		+'<br><b>Constraints and Assumptions :</b><br> As you are an Instrumentation and Control Engineer process related details are'
+		+'not expected from you. You will receive the same from a process expert.</b></div>'
+		+'<div class="row"><img src="images/batchProcess.png" class="img img-responsive"></img></div>'
+	
 		$("#diagram").html(htm);
        var temp=0;
 	   var percentage;
@@ -263,7 +256,7 @@ function BatchProcessBottleFillingPiping()
 				  if(flag==0){
 					  $("#modelDialog").removeClass("modal-md");
 					  $("#modelDialog").addClass("modal-xl");
-					  $("#modelTitle").html("Required configuration ");
+//					  $("#modelTitle").html("Required configuration ");
 					  htm=''
 						  +'<div class="row">'
 						  +'<div class="col-sm-6" >'
@@ -352,7 +345,7 @@ function BatchProcessBottleFillingPiping()
 							+'</div>'
 							+'</div>'
 
-						+"<img src='images/bottlefilling.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/BP_withoutSensor.png' class='img-fluid' style='border-style: double;border-color: black;'>"
 					  
 						 $("#modelBody").html(htm);
 						  $("#modelBody").css("color","red");   
@@ -420,15 +413,15 @@ function BatchProcessBottleFillingPiping()
 					addToMasterJson();
 					htm=''
 						+'<div class="col-sm-12" >'
-						+"<img src='images/bottlefilling.png' class='img-fluid' id='partA1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+						+"<img src='images/BP_withoutSensor.png' class='img-fluid' id='partA1' style=' width: 10%;height:10%;position: relative; margin: 20px;' >"
 						+'</div>'
 						
 					$("#diagram").html(htm);
 					 $("#partA1").animate(
 					          {
-					            width: "1000px",
-					            height: "700px",
-					           left: "+=100px",
+					            width: "90%",
+					            height: "80%",
+					           left: "+=10px",
 		//			            background-color:"red"
 					            
 					          },

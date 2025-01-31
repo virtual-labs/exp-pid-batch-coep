@@ -36,7 +36,7 @@ The plant is designed with safety in mind, incorporating features such as emerge
 
 All the tanks are made of Stainless Steel as the same will be used for food grade. The Reactor Tank is jacketed so as to provide the steam heating for desire batch product. The tanks are named as Tank A, Tank B, Tank C, and a Reactor Tank.  Tank A, B, and C are for Ingredient feed and the Reactor tank is for product production. Tank A, B and C contains the level switches. The Tank D and Reactor tank contain the level transmitter. Tank A, B and C are of same dimension and same capacity as shown:
 
-![ *Bottle_filling_1*](images/Bottle_filling.PNG)
+![ *Bottle_filling_1*](images/Bottle_filling.png)
 
 
 ##### Batch Process Model 
@@ -47,7 +47,9 @@ A process flow diagram (PFD) is commonly used in chemical and process engineerin
 
 Field devices that provide an analog output as their signal (analog sensors or transducers) are usually connected to transmitters, which in turn, send the analog signal to the module. A transducer converts a field device's variable (i.e., pressure, temperature, etc.) into a very low-level electrical signal (current or voltage) that can be amplified by a transmitter and then input into the analog interface.
 
-##### The Analog Inputs for Batch Process as follows:
+![ *Batch_Process_Piping*](images/Batch_Process_Piping.png)
+
+##### The Analog Inputs for Batch Process as follows :
 
 1. Capacitive Level Transmitter (LT4)
 2. Ultrasonic Level Transmitter (LT3)
@@ -55,7 +57,7 @@ Field devices that provide an analog output as their signal (analog sensors or t
 4. Temperature Transmitter for Condensate temperature (TT5)
 5. Weight Transmitter (WT)
 
-##### Analog Output
+#### Analog Output
 
 Like analog inputs, analog output interfaces are usually connected to controlling devices through transducers. These transducers amplify, reduce, or change the discrete voltage signal into an analog signal, which in turn, controls the output device. The Analog Output for Batch Process as follows:
 
@@ -68,14 +70,14 @@ The discrete input (DI) system provides the physical connection between the cent
 
 ##### The List of Digital Input  (DI) for Batch Process as follows :
 
-- Conductivity Type Low Level Switch (LSLL1)
-- Conductivity Type High Level Switch (LSHH1)
-- High Level Displacer Switch (LSHH2)
-- Low Level Magnetic Float Switch (LSLL2)
-- High Level Capacitive Switch (LSHH3)
-- Low Level Vibrating Fork Switch (LSLL3)
-- ACK PB
-- Emergency Stop
+• Conductivity Type Low Level Switch (LSLL1)
+• Conductivity Type High Level Switch (LSHH1)
+• High Level Displacer Switch (LSHH2)
+• Low Level Magnetic Float Switch (LSLL2)
+• High Level Capacitive Switch (LSHH3)
+• Low Level Vibrating Fork Switch (LSLL3)
+• ACK PB
+• Emergency Stop
 
 #### Digital Output (DO)
 
@@ -95,6 +97,8 @@ motor skills that exercise control over a machine or process.
 9. Angel Valve Solenoid Operated for Tank D outlet (AV4)
 10. 3 Phase Motor for Agitator (M)
 
+![ *Batch_Process_Sensors*](images/Batch_Process_Sensors.png)
+
 #### Bottle filling Pilot Plant
 
 The pilot is a complex integration of various mechanical, pneumatic, electro-pneumatic and electronic components. A transportation system, which is control by PLC, is fed with packaging material of different types using electro-pneumatic
@@ -103,18 +107,18 @@ The pilot plant will be used along with the Batch Process Plant that is already 
 
 ##### The Pilot plant consists of :
 
-- Bottle Feeding Station
-- Bottle Inspection Station
-- Linear Transport Station
-- Rotary Transport Station
-- Bottle Sorting and Stacking Station
+• Bottle Feeding Station
+• Bottle Inspection Station
+• Linear Transport Station
+• Rotary Transport Station
+• Bottle Sorting and Stacking Station
 
 #### Bottle Feeding Station
 
 Different Types of packages are available. These packages are randomly picked and placed at the transportation station using an electro-pneumatic pick-and-place arrangement. 
 
 2 liter 10 containers, 
-1 liter 10 containers, 
+1 liter 10 containers,
 and 2 liter 10 containers material SS 304 16 SWG, 12 liter plastic  5 containers.
 
 #### Bottle inspection Station :
@@ -127,4 +131,8 @@ This is a pneumatic rotary transportation system. The packages are placed under 
 
 #### Sorting and Staking Station:
 
-The packages are picked up from the second transportation station by pneumatic gripper and pneumatic cylinder. An electrically operated carriage helps these appropriately sta
+The packages are picked up from the second transportation station by pneumatic gripper and pneumatic cylinder. An electrically operated carriage helps these appropriately stack.
+
+![*Batch and Bottle Filling*](images/Batch and Bottle Filling.PNG)
+
+![*MImic*](images/Mimic.png)

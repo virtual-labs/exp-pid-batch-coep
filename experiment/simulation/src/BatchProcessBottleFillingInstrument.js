@@ -39,7 +39,7 @@ function BatchProcessBottleFillingInstrument()
 	
 	var totalComp1;
 	
-	$("#Header").html("	<center><span >BATCH PROCESS & BOTTLE FILLING - VESSEL & INSTRUMENT DIAGRAM</span></center>");
+	$("#Header").html("	<center><span >BATCH PROCESS & BOTTLE FILLING - INSTRUMENT DIAGRAM</span></center>");
 	$("#Selection").css({"overflow": "auto","height":" 837px"});
 	htm=''
 		+'<div class="row titlePart" style="    border-style: unset;">'
@@ -195,7 +195,7 @@ function BatchProcessBottleFillingInstrument()
 					    +' </tbody>'
 						+'</table>'
 						+'</div>'
-						+"<img src='images/bottlefilling.png' class='img-fluid' style='border-style: double;border-color: black;'>"
+						+"<img src='images/BP_withSensor.png' class='img-fluid' style='border-style: double;border-color: black;width: 100%;height:100%'>"
 						 $("#modelBody1").html(htm);
 						  $("#modelBody1").css("color","red"); 
 				  }
@@ -219,24 +219,25 @@ function BatchProcessBottleFillingInstrument()
 			 $("#modelTitle1").html("Message box");
 			 $("#modelBody1").html("<b>Click on 'Next level' button.</b>");
 			$("#modelBody1").css("color","green");
-			$("#tt,#ft,#pt,#lt,#lsl,#lsh,#tsh,#tsl,#vfd,#psh,#plc,#scr,#verifyInstr").prop("disabled",true);
+			$("#tt,#ft,#pt,#lt,#lsl,#lsh,#tsh,#tsl,#vfd,#psh,#plc,#scr,#verifyInstr,#ps1,#ps1Half,#ps3,#afr,#lshh,#lsll,#lt,#tt,#wt").prop("disabled",true);
 			addToMasterJson();
 		
 			flag=1;
 			htm=''
 				+'<div class="col-sm-12" >'
-				+"<img src='images/bottlefilling.png' class='img-fluid' id='partB1' style=' width: 100px;height:100px;position: relative; margin: 20px;'  >"
+				+"<img src='images/BP_withSensor.png' class='img-fluid' id='partB1' style=' width: 10%;height:10%;position: relative; margin: 20px;'  >"
 				+'</div>'
 			  $("#diagram").html(htm);
 			  $("#partB1").animate(
-			          {
-			            width: "1000px",
-			            height: "700px",
-			            left: "+=100px",
-			          },
-			          1000,
-			          
-			        );
+			           {
+					            width: "90%",
+					            height: "80%",
+					           left: "+=10px",
+		//			            background-color:"red"
+					          },
+					          1000,
+					          
+					        );
 				$("#nextLevel2").prop("hidden",false);
 		}
 		else{
@@ -302,7 +303,7 @@ function BatchProcessBottleFillingInstrument()
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){
-			BatchProcessBottleFillingPreQuestion();
+			BatchProcessBottleFillingSquActivities();
 		}
 	
 	});
