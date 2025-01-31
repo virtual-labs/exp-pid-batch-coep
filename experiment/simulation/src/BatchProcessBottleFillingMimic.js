@@ -361,15 +361,22 @@ var tankCcolor = "rgb(86, 176, 84)"; //green
 $("#startBtn").click(function () {
 	 $("#startBtn").prop("disabled",true);
 	 
-    $("#modelDialog1").addClass("modal-md");
-    $("#modelTitle1").html("Check the Components");
-    $("#modelBody1").html(
-        "<b>Before starting the plant check whether<br>- All valves are closed <br>- All pumps are switched off<br>- The instrument air, electricity and other required utilities are available <br>- The production schedule mandates to produce and raw material is available</b>"
-    );
-    $("#modelBody1").css("color", "#f54545");
-
-    // Show the modal
+    $("#modelDialog1").addClass("modal-lg");
+  $("#modelTitle1").html("Check the Components");
+  var modelBody1=''
+	  +'<b>Before starting the plant check whether<br>- All valves are closed <br>' 
+	  +'- All pumps are switched off<br>- The instrument air, electricity and other required utilities are available <br>'
+	 +' - The production schedule mandates to produce and <br>'
+	 +' - Raw material is available</b>'
+	
+  $("#modelBody1").html(modelBody1);
     $("#myModal1").modal("show");
+     $("#modelBody1").css({
+	            'font-weight': '500',            // Add padding
+	            'font-family': 'math',       // Font style
+	            'font-size': '16px',          // Font size
+	            'color': '#0c55a3'               // Text color
+	        });
 });
 
 // Trigger animation and functionality after modal is dismissed
