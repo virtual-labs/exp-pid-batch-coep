@@ -36,7 +36,7 @@ The plant is designed with safety in mind, incorporating features such as emerge
 
 All the tanks are made of Stainless Steel as the same will be used for food grade. The Reactor Tank is jacketed so as to provide the steam heating for desire batch product. The tanks are named as Tank A, Tank B, Tank C, and a Reactor Tank.  Tank A, B, and C are for Ingredient feed and the Reactor tank is for product production. Tank A, B and C contains the level switches. The Tank D and Reactor tank contain the level transmitter. Tank A, B and C are of same dimension and same capacity as shown:
 
-![ *Bottle_filling_1*](images/Bottle_filling.png)
+![ *Bottle_filling_1*](images/Bottle_filling.PNG)
 
 
 ##### Batch Process Model 
@@ -70,14 +70,14 @@ The discrete input (DI) system provides the physical connection between the cent
 
 ##### The List of Digital Input  (DI) for Batch Process as follows :
 
-• Conductivity Type Low Level Switch (LSLL1)
-• Conductivity Type High Level Switch (LSHH1)
-• High Level Displacer Switch (LSHH2)
-• Low Level Magnetic Float Switch (LSLL2)
-• High Level Capacitive Switch (LSHH3)
-• Low Level Vibrating Fork Switch (LSLL3)
-• ACK PB
-• Emergency Stop
+- Conductivity Type Low Level Switch (LSLL1)
+- Conductivity Type High Level Switch (LSHH1)
+- High Level Displacer Switch (LSHH2)
+- Low Level Magnetic Float Switch (LSLL2)
+- High Level Capacitive Switch (LSHH3)
+- Low Level Vibrating Fork Switch (LSLL3)
+- ACK PB
+- Emergency Stop
 
 #### Digital Output (DO)
 
@@ -107,11 +107,11 @@ The pilot plant will be used along with the Batch Process Plant that is already 
 
 ##### The Pilot plant consists of :
 
-• Bottle Feeding Station
-• Bottle Inspection Station
-• Linear Transport Station
-• Rotary Transport Station
-• Bottle Sorting and Stacking Station
+- Bottle Feeding Station
+- Bottle Inspection Station
+- Linear Transport Station
+- Rotary Transport Station
+- Bottle Sorting and Stacking Station
 
 #### Bottle Feeding Station
 
@@ -133,6 +133,6 @@ This is a pneumatic rotary transportation system. The packages are placed under 
 
 The packages are picked up from the second transportation station by pneumatic gripper and pneumatic cylinder. An electrically operated carriage helps these appropriately stack.
 
-![*Batch and Bottle Filling*](images/Batch and Bottle Filling.PNG)
+![*Batch and Bottle Filling*](images/BatchAndBottleFilling.png)
 
 ![*MImic*](images/Mimic.png)
