@@ -1,8 +1,10 @@
-
+ComponentMasterJson = {};
+timerMasterJson = {};
+resultJson={};
 function BatchProcessBottleFillingPiping()
 {
 	ComponentMasterJson = {};
-	
+	var pipingActualCount=0;
 	var StdCompPipingCount=55;
 	var StdJackettedVesselCount=1;
 	var StdTankCount=5;
@@ -191,6 +193,7 @@ function BatchProcessBottleFillingPiping()
 	   var selectedValues;
 	   var selectedArray=[];
 	$("#verifyComponents").click(function(){
+		pipingActualCount++;
 		 percentage=0;
 		 jacketVessels=parseInt($("#jacketVessels").val());
 		 vessel1=parseInt($("#vessel1").val());
@@ -515,6 +518,8 @@ function BatchProcessBottleFillingPiping()
 		ComponentMasterJson.Component=tempMasterJsonComp;
 		ComponentMasterJson.Component.Utilities=selectedArray;
 		console.log(ComponentMasterJson);
+		resultJson.piping=pipingActualCount;
+		console.log(resultJson);
 	}
 	
 	$("#nextLevel1").click(function(){

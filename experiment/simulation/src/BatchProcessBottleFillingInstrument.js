@@ -2,7 +2,7 @@
 function BatchProcessBottleFillingInstrument()
 {
 	
-	
+	var instrActualCount=0;
 	var InstrMasterJson = {};
 	var StdCompInstruCount=17;
 	
@@ -39,6 +39,10 @@ function BatchProcessBottleFillingInstrument()
 	
 	var totalComp1;
 	
+	timerMasterJson.piping=$("#counter").text();
+//	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 	$("#Header").html("	<center><span >BATCH PROCESS & BOTTLE FILLING - INSTRUMENT DIAGRAM</span></center>");
 	$("#Selection").css({"overflow": "auto","height":" 837px"});
 	htm=''
@@ -127,6 +131,7 @@ function BatchProcessBottleFillingInstrument()
 	   var flag=0;
 	$("#verifyInstr").click(function(){
 		
+		instrActualCount++;
 		 ps1=parseInt($("#ps1").val());
 		 ps1Half=parseInt($("#ps1Half").val());
 		 ps3=parseInt($("#ps3").val());
@@ -300,6 +305,8 @@ function BatchProcessBottleFillingInstrument()
 				
 		InstrMasterJson.Instrument=tempMasterJsonInstr;
 		console.log(InstrMasterJson);
+		resultJson.instrument=instrActualCount;
+		console.log(resultJson);
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){
