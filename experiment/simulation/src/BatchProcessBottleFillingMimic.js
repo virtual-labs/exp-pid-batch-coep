@@ -1,9 +1,17 @@
  var stopSavingValues;
  let dataInterval; 
+ var startCount=0;
+var datasheetCount=0;
+var trendsCount=0;
+let  testCycle = [];
+ var time = 2000;
+var selectedValue=2000;
 function BatchProcessBottleFillingPipingMimic(){
+	timerMasterJson.squences=$("#counter").text();
+	console.log(timerMasterJson);
+	seconds = 0;
+	  updateCounter();
 $("#Header").html("	<center><span >SIMULATION</span></center>");
-	
-	
 	
 	htm=''
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
@@ -19,10 +27,12 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		+'</div>'
 		+'<div class="row">'
 		+'<div class="col-sm-6">'
-		+'<button id="datasheet" class="btn btn-danger" style="width:100%;margin-top:10px;" disabled>View Datasheet</button>'
+//		+'<button id="datasheet" class="btn btn-danger" style="width:100%;margin-top:10px;" >View Datasheet</button>'
+		+'<button id="datasheetBtn" class="btn btn-danger" style="width:100%;margin-top:10px" data-toggle="modal" data-target="#datasheetModel" disabled>View Datasheet</button>'
+	
 		+'</div>'
 		+'<div class="col-sm-6">'
-		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends" disabled>Trends </button>'
+		+'<button type="button" class="btn btn-danger"  id="graph" style="margin-top:10px;width:100%" data-toggle="modal" data-target="#modalTrends1" disabled>Trends </button>'
 		+'</div>'
 		+'</div>'
 		+'<div class="row titlePart"  style="border-style: unset;padding:7px;">'
@@ -56,7 +66,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		+' <td><label><b>STIRRER STATUS </b></label></td>'
 		+' <td><label class="PMCValue" id="strSt">OFF</label></td>'
 		+'  </tr>'
-//		
+			
 //		+'  <tr>'
 //		+' <td><label><b>Peristaltic Pump :</b></label></td>'
 //		+' <td><label class="PMCValue" id="pump">0</label>%</td>'
@@ -68,13 +78,50 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 //		+'  <tr>'
 //		+' <td><label><b>ID Fan :</b></label></td>'
 //		+' <td><label class="PMCValue" id="idfan">0</label>%</td>'
+
 		+'  </tr>'
 		+'</tbody>'
 		+'</table>'
 
 		+'</div>'
 		+'<div class="col-sm-12">'
-		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%" disabled >Result</button>'
+		+'<button type="button" class="btn btn-danger"  id="next" style="margin-top:10px;width:100%" hidden>Next</button>'
+		+'</div>'
+		+'<div class="col-sm-12">'
+		+'<button type="button" class="btn btn-danger"  id="btnResult" style="margin-top:10px;width:100%" disabled>Result</button>'
+		+'</div>'
+		
+		+'<div class="modal fade " id="datasheetModel">'
+		+'<div class="modal-dialog modal-xl" >'
+		+'<div class="modal-content">'
+		+'<div class="modal-header">'
+		+'<h4 class="modal-title"><center>Datasheet</center></h4>'
+		+'<button type="button" class="close" data-dismiss="modal">&times;</button>'
+		+'</div>'
+		+'<div class="modal-body" id="datasheetBody">'
+		+'</div>'
+		+'<div class="modal-footer">'
+//		+'<button type="button" class="btn btn-danger" data-dismiss="modal" >OK</button>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
+		
+		
+		+'<div class="modal fade " id="modalTrends1">'
+		+'<div class="modal-dialog modal-xl" >'
+		+'<div class="modal-content">'
+		+'<div class="modal-header">'
+		+'<h4 class="modal-title"><center>Graph</center></h4>'
+		+'<button type="button" class="close" data-dismiss="modal">&times;</button>'
+		+'</div>'
+		+'<div class="modal-body" id="trends1">'
+		+'</div>'
+		+'<div class="modal-footer">'
+//		+'<button type="button" class="btn btn-danger" data-dismiss="modal" >OK</button>'
+		+'</div>'
+		+'</div>'
+		+'</div>'
 		+'</div>'
 		
 		
@@ -102,29 +149,70 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 +'</div>'  
 +'<!-- End Modal -->'
 		
-	
-	
 	$("#Selection").html(htm);
-	
-	
+		
 //	spryerDryermimicDiagram();
 	
 	$("#graph").click(function(){
-		spryerDryerPostQuestion(dataJson);
 		trendsCount++;
+		$("#trends1").empty("");
+		var htm=''
+		
+	for(var i=0;i<testCycle.length;i++){
+		htm+='<div class="Container-fluid">'
+//		htm+='<h4>Test Cycle - '+(i+1)
+			var rowStr='RowDiv'+(i+1)
+		  htm+="<div class='row' id='"+rowStr+"'>"
+			
+			var GraphData='sensorGraphCold'+i;
+			var CheckBoxData='CheckBox'+i;
+		    htm+=''
+		    +"<div class='col-sm-12' id="+CheckBoxData+">"
+			+'</div>'
+		    +"<div class='col-sm-12' id="+GraphData+">"
+			+'</div>'	
+		 
+		$("#trends1").append(htm);
+		
+			batchProcessGraph(testCycle[i],i);
+//		tempratureSensorGraphHot(dataArr[i],i);
+		 var count=parseInt(i+1);
+			$('#GraphDataButton'+count).on('click', function() {
+				
+//				$('#saveAsJpg').prop("hidden",true);
+				
+			    html2canvas(document.querySelector('#RowDiv'+count)).then(canvas => {
+			        // Append the screenshot canvas to the body
+			        document.body.appendChild(canvas);
+			        $("canvas").css("display","none");
+			        // Optionally save the screenshot as an image
+			        var link = document.createElement('a');
+			        link.download = 'Density_report.png';
+			        link.href = canvas.toDataURL();
+			        link.click();
+			    });
+			});
+	}	
+});
+	
+	$("#next").click(function(){
+		resultJson.animationStart=startCount;
+		resultJson.datasheet=datasheetCount;
+		resultJson.trends=trendsCount;
+		console.log(resultJson);
+		BatchProcessBottleFillingMimic2();
 	});
 	
 	$("#btnResult").click(function(){
 		resultJson.animationStart=startCount;
 		resultJson.datasheet=datasheetCount;
 		resultJson.trends=trendsCount;
-		console.log(resultJson);
 		result();
 	});
 	
 	
 	$("#reset").click(function(){
-		stopSavingValues();
+//		stopSavingValues();
 		clearInterval(dataInterval);
 		$("#Selection").html('');
 		$("#diagram").html('');
@@ -157,86 +245,39 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
   console.log("Reset complete.");
 }
 	
-	$("#datasheet").click(function(){
-		const link = document.createElement('a'); 
-	    link.setAttribute('download', 'sprayDryerData.pdf'); 
-	    link.setAttribute('href', 'images/sprayDryerData.pdf'); 
-	    link.setAttribute('target','_blank')
-	    document.body.appendChild(link); 
-	    link.click(); 
-	    document.body.removeChild(link);
-	    datasheetCount++;
+	$("#datasheetBtn").click(function(){
+		datasheetCount++;
+	    BatchProcessDatasheet();
 		});
 	
 	BatchProcessBottleFillingDiagram();
-//	$("#BoilerHeatExchangerPost").click(function(){
-//		
-//		BatchProcessBottleFillingPostQuestion();
-//		
-//	});
-
 }
+var dataArr = [];
+
 function BatchProcessBottleFillingDiagram()
 {
-    
-		// Get the dimensions of the window
-		var windowWidth = window.innerWidth;
-		var windowHeight = window.innerHeight;
+    // Define the interval globally to reference in other functions
+ dataArr = [];
+
 		
-		// Define the desired virtual canvas size
-		var virtualWidth = 1500;
-		var virtualHeight = 1000;
-		
-		// Create the Raphael canvas
-		var paper = new Raphael(document.getElementById('diagram'), '100%', '100%');
-		
-		// Set the viewBox to scale content dynamically
-		paper.setViewBox(0, 0, virtualWidth, virtualHeight, true);
-		
-		// Detect device pixel ratio
-		var scaleFactor = window.devicePixelRatio || 1;
-		
-		// Define scale adjustment based on screen scaling
-		var scale;
-		if (scaleFactor === 1) {
-		    // 100% scaling
-		   scale = 1 * 1.1 / scaleFactor;
-		} else if (scaleFactor > 1 && scaleFactor <= 1.25) {
-		    // 125% scaling
-		    scale = 1 * 1.4 / scaleFactor; // Adjust as per your requirement
-		} else {
-		    // Other scaling (e.g., 150%, etc.)
-		    scale = 1 / scaleFactor; // Default adjustment
-		}
-		
-		// Apply the scale to the canvas using transform
-		paper.canvas.setAttribute('style', `transform: scale(${scale}); transform-origin: 0 0;`);
-		
-		// Ensure the canvas matches the screen dimensions
-		paper.setSize('100%', '100%');
+		var w = 1200;
+	var h = 1000;
+$("#diagram").html("");
+	var width = $(window).width();
+
+	if ($(window).width() < 500) {
+		width = $(this).width();
+		paper = new Raphael(document.getElementById('diagram'), '100%', '100%');
+		paper.setViewBox(0, 0, w, h, true);
+		paper.setSize('90%', '90%');
+	} else {
+		paper = new Raphael(document.getElementById('diagram'), '100%', '100%');
+		paper.setViewBox(0, 0, w, h, true);
+		paper.setSize('90%', '90%');
+	}
+
 
     var x=220,y=120;
-	
-	
-	  
-//	  var paper = Raphael("diagram", 1500, 700);
-//
-// var x=250,y=50;
-//
-//	var w = 1500;
-//	var h = 1000;
-//	var width = $(window).width();
-//	var paper = new Raphael(document.getElementById('diagram'), '100%', '70%');
-//	paper.setViewBox(0, 0, w, h, true);
-//	paper.setSize('100%', '70%');
-
-//var tankAcolor = "#fc6868";
-//var tankBcolor = "#68a1fc";
-//var tankCcolor = "#68fc72";
-
-//var tankAcolor = "#c73e3e"; //red
-//var tankBcolor = "#3f85eb"; //blue
-//var tankCcolor = "#56b054"; //green
 
 var tankAcolor = "rgb(199, 62, 62)"; //red
 var tankBcolor = "rgb(63, 133, 235)"; //blue
@@ -244,7 +285,7 @@ var tankCcolor = "rgb(86, 176, 84)"; //green
 
 
 // var time = 2000; // this time takes 5 min and 40 sec
-   var time = 2000;
+   time = selectedValue ;
    
 	tank(x+ 210,y+ 140);
 	tank(x+380,y+ 140);
@@ -359,9 +400,13 @@ var tankCcolor = "rgb(86, 176, 84)"; //green
  
 
 $("#startBtn").click(function () {
-	 $("#startBtn").prop("disabled",true);
-	 
-    $("#modelDialog1").addClass("modal-lg");
+	dataArr=[];
+	 startCount++;
+	 console.log(" time "+time);
+	
+	  $("#startBtn").prop("disabled",true);
+  // Configure and show the modal
+  $("#modelDialog1").addClass("modal-lg");
   $("#modelTitle1").html("Check the Components");
   var modelBody1=''
 	  +'<b>Before starting the plant check whether<br>- All valves are closed <br>' 
@@ -370,6 +415,61 @@ $("#startBtn").click(function () {
 	 +' - Raw material is available</b>'
 	
   $("#modelBody1").html(modelBody1);
+  
+  if(startCount>1){
+	   time = selectedValue;
+		 console.log(" start time "+time);
+		 console.log("selectedValue after start "+selectedValue);
+	  modelBody1+=''
+		 
+		  +' <div class="panel">'
+			 +' <h5>Set Simulation Time</h5>'
+			 +' <div class="form-check form-check-inline">'
+			 +'   <input class="form-check-input" type="radio" name="plantTime" id="twoMinutes" value="300">'
+			 +'   <label class="form-check-label radio-label" for="twoMinutes">2 min</label>'
+			 +'  </div>'
+		  +'  <div class="form-check form-check-inline">'
+		  +'    <input class="form-check-input" type="radio" name="plantTime" id="threeMinutes" value="500">'
+		  +'    <label class="form-check-label radio-label" for="threeMinutes">3 min</label>'
+		  +'  </div>'
+		  +'  <div class="form-check form-check-inline">'
+		  +'    <input class="form-check-input" type="radio" name="plantTime" id="fourMinutes" value="700">'
+		  +'    <label class="form-check-label radio-label" for="fourMinutes">4 min</label>'
+		  +'  </div>'
+		  +'  <div class="form-check form-check-inline">'
+		  +'    <input class="form-check-input" type="radio" name="plantTime" id="fiveMinutes" value="1000">'
+		  +'    <label class="form-check-label radio-label" for="fiveMinutes">5 min</label>'
+		  +'  </div>'
+		  +'  <div class="form-check form-check-inline">'
+		  +'    <input class="form-check-input" type="radio" name="plantTime" id="sixMinutes" value="1400">'
+		  +'    <label class="form-check-label radio-label" for="sixMinutes">6 min</label>'
+		  +'  </div>'
+//		  +'	  <div id="selectedTime">Selected Time: None</div>'
+		  +'	</div>'
+		  $("#modelBody1").append(modelBody1);
+		  	        //$("#reset").prop("disabled",false);
+//  $("#startBtn").prop("disabled",true);
+//  $("#datasheet").prop("disabled",true);
+  // Stop any ongoing animations or timers
+  const radioButtons = document.querySelectorAll('input[name="plantTime"]');
+  const selectedTimeDiv = document.getElementById('selectedTime');
+  
+  // Add event listeners to each radio button
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', () => {
+//      selectedTimeDiv.textContent = `Selected Time: ${radio.value}`;
+//      console.log(${radio.value});
+       selectedValue = $('input[name="plantTime"]:checked').val();
+      console.log("on change event "+selectedValue);
+      time = selectedValue;
+		 console.log(" start time "+time);
+		 console.log("selectedValue after start "+selectedValue);
+//      $('#selectedTime').text(`Selected Time: ${selectedValue}`);
+     
+    });
+  });
+  }
+
     $("#myModal1").modal("show");
      $("#modelBody1").css({
 	            'font-weight': '500',            // Add padding
@@ -377,12 +477,15 @@ $("#startBtn").click(function () {
 	            'font-size': '16px',          // Font size
 	            'color': '#0c55a3'               // Text color
 	        });
+	        
+
+	        
 });
 
 // Trigger animation and functionality after modal is dismissed
 $("#myModal1").on("hidden.bs.modal", function () {
     console.log("Modal has been dismissed!");
-     $("#reset").prop("disabled",false);
+//     $("#reset").prop("disabled",false);
     // Start animation and additional functionality
     motorTankA.toFront();
     motorOnTankA.toFront();
@@ -1434,7 +1537,7 @@ function steamFlowRemove(){
   //condensate
   
    var condensate = paper.path("M"+(x+490)+" "+(y+500)+" l 220 0 l 0 20 ").attr({ stroke: "#000","stroke-width": 9,"stroke-linejoin": "round"})
-  var condensate1 = paper.path("M"+(x+490)+" "+(y+500)+" l 220 0 l 0 20").attr({ stroke: "#fff","stroke-width": 6.5,"stroke-linejoin": "round"}) 
+   var condensate1 = paper.path("M"+(x+490)+" "+(y+500)+" l 220 0 l 0 20").attr({ stroke: "#fff","stroke-width": 6.5,"stroke-linejoin": "round"}) 
 //    var condensate2 = paper.path("M"+(x+490+220)+" "+(y+500)+" l 0 30").attr({ stroke: "#000","stroke-width": 9,"stroke-linejoin": "round"})
      
 
@@ -1601,9 +1704,6 @@ function steamFlowRemove(){
 	   
 }
 
-// Define the interval globally to reference in other functions
-var dataArr = [];
-	
 function getValues() {
    // Array to store the JSON objects
    dataInterval = setInterval(() => {
@@ -1633,10 +1733,10 @@ function getValues() {
 //       console.log(totWtValue);
     // Store the object in the array
     dataArr.push(dataObj);
+   
 
-//    console.log("Data stored:", dataArr);
-
-  }, (time/1.4)); // Interval of 5 seconds
+//  }, (time/1.4)); // Interval of 5 seconds
+  }, (time*2));
 }
  
 
@@ -1645,6 +1745,10 @@ function getValues() {
   if (dataInterval) {
     clearInterval(dataInterval);
     console.log("Saving values stopped.");
+    $("#datasheetBtn, #graph,#reset,#next,#btnResult").prop("disabled",false);
+     testCycle.push(dataArr);
+
+    console.log(" cycle Data stored:", testCycle);
   } else {
     console.log("No active interval to stop.");
   }
@@ -2483,7 +2587,7 @@ function cycleOd60Temp() {
     
   }, time / 2); // Interval for updating the temperature
   
-  console.log(dataArr);
+//  console.log(dataArr);
 }
 
 

@@ -335,7 +335,7 @@ background-color: #343a40;
     font-family: inherit;
 }
 
-#simDemo,#nextLevel1,#verifyComponents,#verifyInstr,#nextLevel2,#verifyButton,#startBtn,#reset,#datasheet,#graph,#procedure,#btnResult,#tagDetail1{
+#simDemo,#nextLevel1,#verifyComponents,#next,#verifyInstr,#nextLevel2,#verifyButton,#startBtn,#reset,#datasheetBtn,#graph,#procedure,#btnResult,#tagDetail1{
     border-color: teal;
     background-color: teal;
 
