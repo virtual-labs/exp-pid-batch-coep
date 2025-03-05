@@ -1,6 +1,8 @@
 function batchProcessGraph(dataJson, i) {
     let currentIndex = 0;
 		var CheckBoxData='CheckBox'+i;
+		var  ButtonDiv='ButtonDiv'+i;
+		var strId='download'+i;
   	var htm=''
 //       +' <h2 class="text-center text-light mb-4">Batch Process Graph</h2>'
        +' <div class="row" id="graphDiv">'
@@ -12,7 +14,9 @@ function batchProcessGraph(dataJson, i) {
        +' </div>';
   
 $("#"+CheckBoxData).html(htm);
-
+	var htm=''
+	+'<button type="button" class="btn btn-danger"  id="'+strId+'" style="margin-top:10px;float:right;" >Graph Download (Test Cycle-'+(i+1)+')</button>'
+	$("#"+ButtonDiv).html(htm);
     const GraphData = 'sensorGraphCold'+i;
 
     // Extract all values for min calculation
@@ -94,14 +98,17 @@ $("#"+CheckBoxData).html(htm);
     });
 
     // Screenshot functionality
-    $('#download').on('click', function () {
-        html2canvas(document.querySelector("#marketChart")).then(canvas => {
-            document.body.appendChild(canvas);
-            $("canvas").css("display", "none");
-            var link = document.createElement('a');
-            link.download = 'SprayDryerGraph.png';
-            link.href = canvas.toDataURL();
-            link.click();
-        });
-    });
+   $('#'+strId).on('click', function() {
+			$('#report').prop("hidden",true);
+		    html2canvas(document.querySelector("#"+GraphData)).then(canvas => {
+		        // Append the screenshot canvas to the body
+		        document.body.appendChild(canvas);
+		        $("canvas").css("display","none");
+		        // Optionally save the screenshot as an image
+		        var link = document.createElement('a');
+		        link.download = 'BatchProcess_Graph_TestCycle - '+(i+1)+'.png';
+		        link.href = canvas.toDataURL();
+		        link.click();
+		    });
+		});
 }

@@ -3,6 +3,7 @@ function result(){
 //	console.log(timerMasterJson);
 	
 	$("#simDemo,#procedure,#counter,#tagDetail1").prop("hidden",true);
+	$("#report").prop("hidden",false);
 	$("#Header").html("<center><span >BATCH PROCESS AND BOTTLE FILLING</span></center>");
 	
 	htm=''
@@ -410,3 +411,6 @@ function result(){
 	});
 
 }
+$("#report").click(function(){
+	
+});

@@ -4,8 +4,8 @@
 var datasheetCount=0;
 var trendsCount=0;
 let  testCycle = [];
- var time = 2000;
-var selectedValue=2000;
+ var time = 1500;
+var selectedValue=1500;
 function BatchProcessBottleFillingPipingMimic(){
 	timerMasterJson.squences=$("#counter").text();
 	console.log(timerMasterJson);
@@ -159,39 +159,31 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		var htm=''
 		
 	for(var i=0;i<testCycle.length;i++){
+		
+		var rowStr='RowDiv'+(i+1);
+		var strId='download'+i;
+		var ButtonDiv='ButtonDiv'+i;	
 		htm+='<div class="Container-fluid">'
-//		htm+='<h4>Test Cycle - '+(i+1)
-			var rowStr='RowDiv'+(i+1)
+
+			
 		  htm+="<div class='row' id='"+rowStr+"'>"
 			
 			var GraphData='sensorGraphCold'+i;
 			var CheckBoxData='CheckBox'+i;
-		    htm+=''
-		    +"<div class='col-sm-12' id="+CheckBoxData+">"
+		    htm+="<div class='col-sm-12' id="+CheckBoxData+">"
 			+'</div>'
 		    +"<div class='col-sm-12' id="+GraphData+">"
-			+'</div>'	
-		 
+			+'</div>'
+			 +"<div class='col-sm-12' id="+ButtonDiv+">"
+			 
+			+'</div>'		
+		 	
 		$("#trends1").append(htm);
 		
 			batchProcessGraph(testCycle[i],i);
 //		tempratureSensorGraphHot(dataArr[i],i);
-		 var count=parseInt(i+1);
-			$('#GraphDataButton'+count).on('click', function() {
-				
-//				$('#saveAsJpg').prop("hidden",true);
-				
-			    html2canvas(document.querySelector('#RowDiv'+count)).then(canvas => {
-			        // Append the screenshot canvas to the body
-			        document.body.appendChild(canvas);
-			        $("canvas").css("display","none");
-			        // Optionally save the screenshot as an image
-			        var link = document.createElement('a');
-			        link.download = 'Density_report.png';
-			        link.href = canvas.toDataURL();
-			        link.click();
-			    });
-			});
+	
+			
 	}	
 });
 	
@@ -1746,6 +1738,7 @@ function getValues() {
     clearInterval(dataInterval);
     console.log("Saving values stopped.");
     $("#datasheetBtn, #graph,#reset,#next,#btnResult").prop("disabled",false);
+//    $("#report").prop("hidden",false);
      testCycle.push(dataArr);
 
     console.log(" cycle Data stored:", testCycle);
