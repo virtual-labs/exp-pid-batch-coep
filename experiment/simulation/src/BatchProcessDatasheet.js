@@ -88,7 +88,7 @@ $("#datasheetBody").html(htm);
     	      });
     	    });
 
-    	    doc.save('Datasheet.pdf'); // Download the generated PDF
+    	    doc.save('BatchProcess_Datasheet.pdf'); // Download the generated PDF
     	  });
 }
 	
