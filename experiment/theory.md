@@ -1,6 +1,8 @@
+## Theory
+
 The batch and bottle filling pilot plant will be a fully automated, state-of-the-art facility designed to simulate real-world industrial production environments. This pilot plant is equipped with the latest technology and is controlled by a Programmable Logic Controller (PLC), which is the brain of the system. The PLC is a computer-based controller that continuously monitors and controls the entire production process, ensuring efficient, reliable, and accurate operation.
 
-### Overview of the Plant
+#### Overview of the Plant
 
 The batch and bottle filling pilot plant required to be designed to mimic the operations of a real-world manufacturing facility. The plant consists of various components, including tanks, pumps, valves, sensors, and actuators, which work together to produce a batch of product and fill it into bottles. The plant is capable of producing a variety of products, including liquids, and can be configured to meet specific production requirements.
 
@@ -8,48 +10,48 @@ The batch and bottle filling pilot plant required to be designed to mimic the op
 
 The PLC control system is the central nervous system of the plant, responsible for controlling and monitoring every aspect of the production process. The PLC receives input from various sensors and transmitters, processes the data, and sends output signals to the actuators to control the plant's operations. The PLC program is designed to ensure that the plant operates safely, efficiently, and within specified parameters.
 		
-### Key requirements of customers about the Plant
+#### Key requirements of customers about the Plant
 
-##### Fully Automatic Operation :
+#### Fully Automatic Operation :
 
 The plant is capable of operating independently, with minimal human intervention, making it an ideal platform for demonstrating the benefits of automation.
 
-##### PLC Control :
+#### PLC Control :
 
 The plant is controlled by a PLC, which provides a realistic and industry-relevant learning experience.
 
-##### Real-Time Monitoring :
+#### Real-Time Monitoring :
 
 The plant is equipped with real-time monitoring systems, allowing operators to track the production process and make adjustments as needed.
 
-##### Flexibility and configurability :
+#### Flexibility and configurability :
 
 The plant can be configured to produce a variety of products, making it an ideal platform for demonstrating the principles of batch processing and filling.
 
-##### Safety Features :
+#### Safety Features :
 
 The plant is designed with safety in mind, incorporating features such as emergency stops, alarm systems, and safety interlocks to ensure a safe operating environment.
 
-### About the Plant :
+#### About the Plant :
 
-##### Batch Process pilot plant details :
+#### Batch Process pilot plant details :
 
 All the tanks are made of Stainless Steel as the same will be used for food grade. The Reactor Tank is jacketed so as to provide the steam heating for desire batch product. The tanks are named as Tank A, Tank B, Tank C, and a Reactor Tank.  Tank A, B, and C are for Ingredient feed and the Reactor tank is for product production. Tank A, B and C contains the level switches. The Tank D and Reactor tank contain the level transmitter. Tank A, B and C are of same dimension and same capacity as shown:
 
 ![ *Bottle_filling_1*](images/Bottle_filling.PNG)
 
 
-##### Batch Process Model 
+#### Batch Process Model 
 
 A process flow diagram (PFD) is commonly used in chemical and process engineering to indicate the general flow of plant processes and equipment. The PFD displays the relationship between major equipment of a plant facility and does not show minor details such as piping details and designations.
 
-##### Analog Input (AI)
+#### Analog Input (AI)
 
 Field devices that provide an analog output as their signal (analog sensors or transducers) are usually connected to transmitters, which in turn, send the analog signal to the module. A transducer converts a field device's variable (i.e., pressure, temperature, etc.) into a very low-level electrical signal (current or voltage) that can be amplified by a transmitter and then input into the analog interface.
 
 ![ *Batch_Process_Piping*](images/Batch_Process_Piping.png)
 
-##### The Analog Inputs for Batch Process as follows :
+#### The Analog Inputs for Batch Process as follows :
 
 1. Capacitive Level Transmitter (LT4)
 2. Ultrasonic Level Transmitter (LT3)
@@ -68,7 +70,7 @@ Like analog inputs, analog output interfaces are usually connected to controllin
 
 The discrete input (DI) system provides the physical connection between the central processing unit and field devices that transmit. Digital signals are non-continuous signals that have only two states ON and OFF. Through various interface circuits and field devices (limit switches, transducers, etc.), the controller senses and measures physical quantities (e.g., proximity, position, motion, level, temperature, pressure, current, and voltage) associated with a machine or process.
 
-##### The List of Digital Input  (DI) for Batch Process as follows :
+#### The List of Digital Input  (DI) for Batch Process as follows :
 
 - Conductivity Type Low Level Switch (LSLL1)
 - Conductivity Type High Level Switch (LSHH1)
@@ -84,7 +86,7 @@ The discrete input (DI) system provides the physical connection between the cent
 The discrete output (DO) system provides the physical connection between the central processing unit and field devices that accept digital signals. Digital signals are non-continuous signals that have only two states ON and OFF. Based on the status of the devices sensed or the process values measured, the CPU issues commands that control the field devices. In short, input/output interfaces are the sensory and
 motor skills that exercise control over a machine or process.
 
-##### The List of Digital Output (DO) for Batch Process as follows :
+#### The List of Digital Output (DO) for Batch Process as follows :
 
 1. Steam Control Valve (CV)
 2. Solenoid Valve for Tank A Inlet (SOV1)
@@ -105,7 +107,7 @@ The pilot is a complex integration of various mechanical, pneumatic, electro-pne
 process. Depending on the type of packaging material,  quality of the material loaded is in varied. After the loading the material, these packages are stacked for further dispatch, based on the defined logic. All these process are controlled by a PLC. There is a facility to modify the PLC program to vary the color combination of material and its count and try various combinations along with the counters. The PLC programming can be done form a remote location (using Virtual PLC, Open Source PLC Program) as well as locally.
 The pilot plant will be used along with the Batch Process Plant that is already available in the lab. The plant should be designed in such a way that it fits properly under the Batch Process Plant and has a good look and feel.
 
-##### The Pilot plant consists of :
+#### The Pilot plant consists of :
 
 - Bottle Feeding Station
 - Bottle Inspection Station
@@ -118,7 +120,9 @@ The pilot plant will be used along with the Batch Process Plant that is already 
 Different Types of packages are available. These packages are randomly picked and placed at the transportation station using an electro-pneumatic pick-and-place arrangement. 
 
 2 liter 10 containers, 
+
 1 liter 10 containers,
+
 and 2 liter 10 containers material SS 304 16 SWG, 12 liter plastic  5 containers.
 
 #### Bottle inspection Station :
