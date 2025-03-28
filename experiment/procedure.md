@@ -1,26 +1,25 @@
+## Procedure
 
-## PROCEDURE
-
-### 1. Piping Diagram Configuration
+#### 1. Piping Diagram Configuration
 - Configure all parameters for the piping diagram. Identify vessels and equipment required to run the plant.
 - Click on the **Verify Components** button.
 - If all configuration parameters are correct, the **Next Level** button will be visible.
 - Click on the **Next Level** button to proceed.
 
-### 2. Instrument Diagram Configuration
+#### 2. Instrument Diagram Configuration
 - Follow the same steps as above to configure the instrument diagram. Identify the instruments required to run the plant.
 - Click on the **Verify Instruments** button.
 - If all configuration parameters are correct, the **Next Level** button will be visible.
 - Click on the **Next Level** button to continue.
 
-### 3. Sequence of Activities
+#### 3. Sequence of Activities
 - Read the **"Prior Knowledge Assessment"** statements carefully.
 - Enter the appropriate sequence number in the provided text box. The system will not allow duplicate numbers, so be careful.
 - Click on the **Submit** button.
 - You have three attempts to verify whether the sequence is correct.
 - Try three times before proceeding to the **Simulation** section.
 
-### 4. Simulation Execution
+#### 4. Simulation Execution
 - Click on the **Start** button to begin the simulation.
 - The first-time setting runs for 5 minutes by default.
 - For other test cycles, you can choose different time durations such as 2 min, 3 min, 4 min, etc.
