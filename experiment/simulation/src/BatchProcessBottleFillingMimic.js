@@ -252,7 +252,7 @@ function BatchProcessBottleFillingDiagram()
  dataArr = [];
 
 		
-		var w = 1200;
+		var w = 1300;
 	var h = 1000;
 $("#diagram").html("");
 	var width = $(window).width();
@@ -2665,7 +2665,7 @@ var endColor = { r: 63, g: 133, b: 235 }; // Ending color (Blue)
 // Gradual transition function
 function transitionGradient() {
 	
-	
+	interval = time*150 / steps;
 	
   if (currentStep <= steps) {
     // Calculate intermediate gradient colors
