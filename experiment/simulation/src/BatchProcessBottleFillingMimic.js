@@ -4,13 +4,18 @@
 var datasheetCount=0;
 var trendsCount=0;
 let  testCycle = [];
- var time = 1500;
-var selectedValue=1500;
+ var time = 100;
+var selectedValue=100;
+initCnt = 1;
+
 function BatchProcessBottleFillingPipingMimic(){
-	timerMasterJson.squences=$("#counter").text();
+	if(initCnt==1){
+		timerMasterJson.squences=$("#counter").text();
 	console.log(timerMasterJson);
 	seconds = 0;
 	  updateCounter();
+	  initCnt++;
+	  }
 $("#Header").html("	<center><span >SIMULATION</span></center>");
 	
 	htm=''
@@ -1728,7 +1733,7 @@ function getValues() {
    
 
 //  }, (time/1.4)); // Interval of 5 seconds
-  }, (time*2));
+  }, (time*1.5));
 }
  
 
