@@ -6,12 +6,12 @@ var trendsCount=0;
 let  testCycle = [];
  var time = 1500;
 var selectedValue=1500;
-initCnt = 1;
+var initCnt = 1;
 
 function BatchProcessBottleFillingPipingMimic(){
 	if(initCnt==1){
-		timerMasterJson.squences=$("#counter").text();
-	console.log(timerMasterJson);
+	timerMasterJson.squences=$("#counter").text();
+	//console.log(timerMasterJson);
 	seconds = 0;
 	  updateCounter();
 	  initCnt++;
@@ -196,7 +196,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		resultJson.animationStart=startCount;
 		resultJson.datasheet=datasheetCount;
 		resultJson.trends=trendsCount;
-		console.log(resultJson);
+		//console.log(resultJson);
 		BatchProcessBottleFillingMimic2();
 	});
 	
@@ -219,7 +219,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
 		resetApp();
 		 $("#startBtn").prop("disabled",false);
 		 $("#reset").prop("disabled",true);
-		console.log("reset clicked ");
+		//console.log("reset clicked ");
 	});
 	
 	
@@ -239,7 +239,7 @@ $("#Header").html("	<center><span >SIMULATION</span></center>");
         
       BatchProcessBottleFillingPipingMimic();
       
-  console.log("Reset complete.");
+ // console.log("Reset complete.");
 }
 	
 	$("#datasheetBtn").click(function(){
@@ -415,8 +415,8 @@ $("#startBtn").click(function () {
   
   if(startCount>1){
 	   time = selectedValue;
-		 console.log(" start time "+time);
-		 console.log("selectedValue after start "+selectedValue);
+		 //console.log(" start time "+time);
+		 //console.log("selectedValue after start "+selectedValue);
 	  modelBody1+=''
 		 
 		  +' <div class="panel">'
@@ -457,10 +457,10 @@ $("#startBtn").click(function () {
 //      selectedTimeDiv.textContent = `Selected Time: ${radio.value}`;
 //      console.log(${radio.value});
        selectedValue = $('input[name="plantTime"]:checked').val();
-      console.log("on change event "+selectedValue);
+//      console.log("on change event "+selectedValue);
       time = selectedValue;
-		 console.log(" start time "+time);
-		 console.log("selectedValue after start "+selectedValue);
+		 console.log(" reset iterate time "+time);
+//		 console.log("selectedValue after start "+selectedValue);
 //      $('#selectedTime').text(`Selected Time: ${selectedValue}`);
      
     });
@@ -481,7 +481,7 @@ $("#startBtn").click(function () {
 
 // Trigger animation and functionality after modal is dismissed
 $("#myModal1").on("hidden.bs.modal", function () {
-    console.log("Modal has been dismissed!");
+    //console.log("Modal has been dismissed!");
 //     $("#reset").prop("disabled",false);
     // Start animation and additional functionality
     motorTankA.toFront();
@@ -1052,7 +1052,7 @@ font: "12px Arial", fill: "#2a2a2b", stroke: "#2a2a2b", "stroke-width": 0.5}).to
 		  if(randomAPercentage%2==0){
 			randomAPercentage = randomAPercentage
 		}else{
-			console.log("else Previous "+randomAPercentage);
+			//console.log("else Previous "+randomAPercentage);
 			randomAPercentage = parseInt(randomAPercentage)-parseInt(1);
 		}
   var tankATextReleasePer = paper.text((x+870),(y+40)," Tank A : "+randomAPercentage+" %").attr({
@@ -1063,7 +1063,7 @@ font: "12px Arial", fill: "#2a2a2b", stroke: "#2a2a2b", "stroke-width": 0.5}).to
              if(randomBPercentage%2==0){
 			randomBPercentage = randomBPercentage
 		}else{
-			console.log("else Previous "+randomBPercentage);
+			//console.log("else Previous "+randomBPercentage);
 			randomBPercentage = parseInt(randomBPercentage)-parseInt(1);
 		}
     
@@ -1075,7 +1075,7 @@ font: "12px Arial", fill: "#2a2a2b", stroke: "#2a2a2b", "stroke-width": 0.5}).to
      if(randomCPercentage%2==0){
 			randomCPercentage = randomCPercentage
 		}else{
-			console.log("else Previous "+randomCPercentage);
+			//console.log("else Previous "+randomCPercentage);
 			randomCPercentage = parseInt(randomCPercentage)-parseInt(1);
 		}
      
@@ -1087,13 +1087,13 @@ font: "12px Arial", fill: "#2a2a2b", stroke: "#2a2a2b", "stroke-width": 0.5}).to
     var finalC = 0;
     
      finalA = parseInt(randomAPercentage/2);
-      console.log(finalA);
+     // console.log(finalA);
      
      finalB = parseInt(randomBPercentage/2);
-      console.log(finalB);
+      //console.log(finalB);
       
      finalC = parseInt(randomCPercentage/2);
-      console.log(finalC); 
+      //console.log(finalC); 
     
  //After tankC
 
@@ -1741,14 +1741,14 @@ function getValues() {
    stopSavingValues =  function () {
   if (dataInterval) {
     clearInterval(dataInterval);
-    console.log("Saving values stopped.");
+    //console.log("Saving values stopped.");
     $("#datasheetBtn, #graph,#reset,#next,#btnResult").prop("disabled",false);
 //    $("#report").prop("hidden",false);
      testCycle.push(dataArr);
 
-    console.log(" cycle Data stored:", testCycle);
+    //console.log(" cycle Data stored:", testCycle);
   } else {
-    console.log("No active interval to stop.");
+    //console.log("No active interval to stop.");
   }
 }
 
@@ -2052,7 +2052,7 @@ function getValues() {
      
      var litMapping = finalARemain/2;
      litMapping = parseInt(litMapping)
-     console.log(" litMapping : "+litMapping);
+    // console.log(" litMapping : "+litMapping);
     let targetPercent = litMapping; // Decrement down to 50
     let currentPercent = tankAPercent; // Initialize current percent to 100
 
@@ -2599,7 +2599,7 @@ var tankCPercentage = randomCPercentage;
 
 // Total weight
 var totWtLit = finalA+finalB+finalC;
-console.log(totWtLit);
+//console.log(totWtLit);
 var totalWeight = parseInt(tankAPercentage) + parseInt(tankBPercentage) +parseInt(tankCPercentage)+parseInt(0);
 
 var weightRect = paper.rect((x+298),(y+152),50,28,7).attr({"fill":"#000","stroke":"#9d9d9e","stroke-width":5})
