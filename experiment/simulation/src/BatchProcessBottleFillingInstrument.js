@@ -143,15 +143,15 @@ function BatchProcessBottleFillingInstrument()
 		 wt=parseInt($("#wt").val());
 		
 		 CountComp1();
-         console.log(" ps1 "+ps1);
-         console.log(" ps1Half "+ps1Half);
-         console.log("ps3 "+ps3);
-         console.log(" afr "+afr);
-         console.log(" lshh "+lshh);
-         console.log(" lsll "+lsll);
-         console.log("lt "+lt);
-         console.log(" tt "+tt);
-         console.log(" wt "+wt);
+//         console.log(" ps1 "+ps1);
+//         console.log(" ps1Half "+ps1Half);
+//         console.log("ps3 "+ps3);
+//         console.log(" afr "+afr);
+//         console.log(" lshh "+lshh);
+//         console.log(" lsll "+lsll);
+//         console.log("lt "+lt);
+//         console.log(" tt "+tt);
+//         console.log(" wt "+wt);
          
 		  if(totalComp1==0){
 				$("#modelDialog1").addClass("modal-md");
@@ -261,7 +261,7 @@ function BatchProcessBottleFillingInstrument()
 			totalComp1= perPS1Count+ perPS3Count+perPS1halfCount+perAFRCount+perLSHHCount+perLSLLCount+perLTCount+perTTCount+perWTCount;
 			  avg=parseInt(totalComp1/9);
 			  
-			  console.log(" avg "+avg);
+//			  console.log(" avg "+avg);
 			
 				 $("#modelDialog1").removeClass("modal-xl");
 				$("#modelDialog1").addClass("modal-md");
@@ -304,9 +304,9 @@ function BatchProcessBottleFillingInstrument()
 				};
 				
 		InstrMasterJson.Instrument=tempMasterJsonInstr;
-		console.log(InstrMasterJson);
+//		console.log(InstrMasterJson);
 		resultJson.instrument=instrActualCount;
-		console.log(resultJson);
+//		console.log(resultJson);
 	}
 	$("#nextLevel2").click(function(){
 		if(flag==1){

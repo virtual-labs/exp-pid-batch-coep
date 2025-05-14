@@ -177,8 +177,8 @@ function BatchProcessBottleFillingPiping()
 		+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
 		+' Here is a general outline to help you define a problem statement for designing and developing a pilot plant.'
 		+'<br><br><b>Problem Statement:</b> You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot plant.'
-		+'<br><br><b>A batch reactor with a capacity of 200 Liters Continuous stirred tank reactor (CSTR) along with a bottle filling plant to fill 20 bottles of different size to be filled in one hour. Number of ingardients are three. </b>'
-		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new “control and automation” technologies.'
+		+'<br><br><b>A batch reactor with a capacity of 200 Liters Continuous stirred tank reactor (CSTR) along with a bottle filling plant to fill  20 bottles of different size to be filled in one hour. Number of ingardients are three. </b>'
+		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new "control and automation" technologies.'
 		+'<br><br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
 		+' selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
 		+'<br><br><b>Constraints and Assumptions :</b><br> As you are an Instrumentation and Control Engineer process related details are'
@@ -228,20 +228,20 @@ function BatchProcessBottleFillingPiping()
 		 
 		 CountComp();
 		 
-		  console.log(" jacketVessels "+jacketVessels);
-		  console.log(" vessel1 "+vessel1);
-		  console.log(" vessel1half "+vessel1half);
-		  console.log(" vessel3 "+vessel3);
-		  console.log(" solenoidValve "+solenoidValve);
-		  console.log(" controlValves "+controlValves);
-		  console.log(" angleValves "+angleValves);
-		  console.log(" tanks "+tanks);
-		  console.log(" pumps "+pumps);
-		  console.log(" rack "+rack);
-		  console.log(" belt "+belt);
-		  console.log(" arams "+arams);
-		  console.log(" motors "+motors);
-		  console.log(" rotaryTable "+rotaryTable);
+//		  console.log(" jacketVessels "+jacketVessels);
+//		  console.log(" vessel1 "+vessel1);
+//		  console.log(" vessel1half "+vessel1half);
+//		  console.log(" vessel3 "+vessel3);
+//		  console.log(" solenoidValve "+solenoidValve);
+//		  console.log(" controlValves "+controlValves);
+//		  console.log(" angleValves "+angleValves);
+//		  console.log(" tanks "+tanks);
+//		  console.log(" pumps "+pumps);
+//		  console.log(" rack "+rack);
+//		  console.log(" belt "+belt);
+//		  console.log(" arams "+arams);
+//		  console.log(" motors "+motors);
+//		  console.log(" rotaryTable "+rotaryTable);
 		 
 		  
 		  if(totalComp==0 ||(jacketVessels === "" || vessel1 === "" || vessel1half === "" || vessel3=="" || solenoidValve=="" ||controlValves=="" || angleValves=="" ||tanks=="" 
@@ -376,20 +376,20 @@ function BatchProcessBottleFillingPiping()
 		  }
 		
 	else{
-		console.log(" jacketVessels "+jacketVessels);
-		  console.log(" vessel1 "+vessel1);
-		  console.log(" vessel1half "+vessel1half);
-		  console.log(" vessel3 "+vessel3);
-		  console.log(" solenoidValve "+solenoidValve);
-		  console.log(" controlValves "+controlValves);
-		  console.log(" angleValves "+angleValves);
-		  console.log(" tanks "+tanks);
-		  console.log(" pumps "+pumps);
-		  console.log(" rack "+rack);
-		  console.log(" belt "+belt);
-		  console.log(" arams "+arams);
-		  console.log(" motors "+motors);
-		  console.log(" rotaryTable "+rotaryTable);
+//		console.log(" jacketVessels "+jacketVessels);
+//		  console.log(" vessel1 "+vessel1);
+//		  console.log(" vessel1half "+vessel1half);
+//		  console.log(" vessel3 "+vessel3);
+//		  console.log(" solenoidValve "+solenoidValve);
+//		  console.log(" controlValves "+controlValves);
+//		  console.log(" angleValves "+angleValves);
+//		  console.log(" tanks "+tanks);
+//		  console.log(" pumps "+pumps);
+//		  console.log(" rack "+rack);
+//		  console.log(" belt "+belt);
+//		  console.log(" arams "+arams);
+//		  console.log(" motors "+motors);
+//		  console.log(" rotaryTable "+rotaryTable);
 		  
 		if((jacketVessels==StdJackettedVesselCount) && (tanks==StdTankCount) && (pumps==StdPumpCount) && (StdControlValveCount==controlValves) &&( StdAngleValveCount==angleValves)
 				&&(StdRackCount==rack)&&(StdBeltCount==belt)&&(StdAramCount==arams)&&(StdMotorCount==motors)&&(StdRotataryTableCount== rotaryTable)&&(Stdvessels1==vessel1)
@@ -423,8 +423,8 @@ function BatchProcessBottleFillingPiping()
 					 $("#partA1").animate(
 					          {
 					            width: "90%",
-					            height: "80%",
-					           left: "+=10px",
+					            height: "90%",
+//					           left: "+=10px",
 		//			            background-color:"red"
 					            
 					          },
@@ -452,27 +452,27 @@ function BatchProcessBottleFillingPiping()
 			perValvesCount=parseFloat((solenoidValve*100)/StdValvesCount);
 			   
 			 
-			 console.log(" perJackettedVesselCount "+perJackettedVesselCount);
-			 console.log(" perTankCount "+perTankCount);
-			 console.log(" perPumpCount "+	 perPumpCount);
-			 console.log(" perControlValveCount "+perControlValveCount);
-			 console.log(" perAngleValveCount "+perAngleValveCount);
-			 
-			 console.log(" perRackCount "+perRackCount);
-			 console.log(" perBeltCount "+perBeltCount);
-			 console.log(" perAramCount "+	 perAramCount);
-			 console.log(" perMotorCount "+perMotorCount);
-			 console.log(" StdRotataryTableCount "+StdRotataryTableCount);
-			 console.log(" pervessels1 "+pervessels1);
-			 console.log(" pervessels1half "+pervessels1half);
-			 console.log(" pervessels3 "+pervessels3);
-			 console.log(" perValvesCount "+perValvesCount);
+//			 console.log(" perJackettedVesselCount "+perJackettedVesselCount);
+//			 console.log(" perTankCount "+perTankCount);
+//			 console.log(" perPumpCount "+	 perPumpCount);
+//			 console.log(" perControlValveCount "+perControlValveCount);
+//			 console.log(" perAngleValveCount "+perAngleValveCount);
+//			 
+//			 console.log(" perRackCount "+perRackCount);
+//			 console.log(" perBeltCount "+perBeltCount);
+//			 console.log(" perAramCount "+	 perAramCount);
+//			 console.log(" perMotorCount "+perMotorCount);
+//			 console.log(" StdRotataryTableCount "+StdRotataryTableCount);
+//			 console.log(" pervessels1 "+pervessels1);
+//			 console.log(" pervessels1half "+pervessels1half);
+//			 console.log(" pervessels3 "+pervessels3);
+//			 console.log(" perValvesCount "+perValvesCount);
 			 
 				totalComp=perJackettedVesselCount+perTankCount+perPumpCount+perControlValveCount+perAngleValveCount+perRackCount+perBeltCount+
 				perAramCount+perMotorCount+StdRotataryTableCount+pervessels1+pervessels1half+pervessels3+perValvesCount;
 			  avg=parseInt(totalComp/14);
 			  
-			  console.log(" avg "+avg);
+//			  console.log(" avg "+avg);
 			
 				 $("#modelDialog").removeClass("modal-xl");
 				$("#modelDialog").addClass("modal-md");
@@ -517,9 +517,9 @@ function BatchProcessBottleFillingPiping()
 		
 		ComponentMasterJson.Component=tempMasterJsonComp;
 		ComponentMasterJson.Component.Utilities=selectedArray;
-		console.log(ComponentMasterJson);
+//		console.log(ComponentMasterJson);
 		resultJson.piping=pipingActualCount;
-		console.log(resultJson);
+//		console.log(resultJson);
 	}
 	
 	$("#nextLevel1").click(function(){
