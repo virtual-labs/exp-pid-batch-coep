@@ -5,13 +5,13 @@
       "question": "What is the function of the PLC program in the pilot plant?",
       "answers": {
         "a": "To monitor the production process",
-        "b": "To control the flow of materials",
-        "c": "To automate the production process",
+        "b": "To enhance the safty of the plant",
+        "c": "To control the flow of materials",
         "d": "To troubleshoot equipment faults"
 		
       },
       
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
@@ -77,9 +77,6 @@
       "difficulty": "beginner"
     },
 	
-	
-	
-	
 	{
       "question": "What is the function of the HMI (Human-Machine Interface) in the pilot plant?",
       "answers": {
@@ -116,21 +113,6 @@
      
       "correctAnswer": "c",
       "difficulty": "beginner"
-    },
-	
-	{
-      "question": "What is the benefit of using a PLC-based control system in the pilot plant?",
-      "answers": {
-        "a": "Increased production capacity",
-        "b": "Improved product quality",
-        "c": "Reduced labor costs",
-        "d": "Increased flexibility and accuracy"
-      },
-     
-      "correctAnswer": "d",
-      "difficulty": "beginner"
     }
-  
-  
   ]
 }

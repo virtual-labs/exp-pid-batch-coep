@@ -1,6 +1,6 @@
 ## Aim
 
- To automate the batch and bottle filling plant as per customer requirements
+ To Design and develop a P&I Diagram for the batch and bottle filling plant as per customer requirements
  
 ## Objectives
 
