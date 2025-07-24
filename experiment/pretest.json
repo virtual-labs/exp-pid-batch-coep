@@ -14,15 +14,15 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What type of sensor is commonly used to measure the level of a liquid in a tank?",
+      "question": "Which type of sensor is commonly used to measure the level of a liquid in a tank?",
       "answers": {
-        "a": "Temperature sensor",
-        "b": "Pressure sensor",
-        "c": "Level sensor",
-        "d": "Flow sensor"
+        "a": "Capacitive level sensor",
+        "b": "Ultrasonic level sensor",
+        "c": "Radar level sensor",
+        "d": "All"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {

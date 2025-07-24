@@ -28,12 +28,6 @@
 
 -	3-A Sanitary Standards, Inc. (2019). 3-A Sanitary Standards for Design, Materials, Construction, and Installation of Dairy and Beverage Equipment. McLean, VA: 3-A Sanitary Standards, Inc.
 
-#### Online Resources:
-
--	Food Processing Technology. (n.d.). Pilot-Scale Food Processing Plants: Design and Operation. Retrieved from https://www.foodprocessing-technology.com/features/pilot-scale-food-processing-plants-design-and-operation/
-
--	Packaging Digest. (n.d.). Bottle Filling and Packaging: Trends, Challenges, and Opportunities. Retrieved from https://www.packagingdigest.com/bottle-filling-and-packaging
-
 #### Thesis and Dissertations:
 
 -	Ahmed, M. U. (2019). Design and Development of a Pilot-Scale Batch Filling Plant for Bottled Water. Master's Thesis, University of Dhaka, Bangladesh.
