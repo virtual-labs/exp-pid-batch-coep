@@ -177,7 +177,7 @@ function BatchProcessBottleFillingPiping()
 		+'It defines the problem or opportunity that the pilot plant aims to address, and it serves as a guiding force throughout the project.'
 		+' Here is a general outline to help you define a problem statement for designing and developing a pilot plant.'
 		+'<br><br><b>Problem Statement:</b> You are given the responsibility as an Instrumentation and Control Engineer to design and commission a pilot plant.'
-		+'<br><br><b>A batch reactor with a capacity of 200 Liters Continuous stirred tank reactor (CSTR) along with a bottle filling plant to fill  20 bottles of different size to be filled in one hour. Number of ingardients are three. </b>'
+		+'<br><br><b>A batch reactor with a capacity of 200 Liters Continuous stirred tank reactor (CSTR) along with a bottle filling plant to fill  20 bottles of different size to be filled in one hour. Number of ingredients are three. </b>'
 		+'<br><p><b>Background :</b> <br>The pilot plant will be used to test the new "control and automation" technologies.'
 		+'<br><br><b>Key Performance Indicators (KPIs) :</b><br> You will be judged based on the accuracy of design, proper'
 		+' selection of field and panel instruments, and successful commissioning of the plant in a stipulated time frame.'
