@@ -110,7 +110,7 @@ function BatchProcessBottleFillingPiping()
 		+' <input class="form-select" id="belts" type="number" min="0" max="10" value="0" tabindex="11" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
-		+'<label><b>Enter no of arams</b></label>'
+		+'<label><b>Enter no of arms</b></label>'
 		+' <input class="form-select" id="arams" type="number" min="0" max="10" value="0" tabindex="12" ></input>'
 		+'</div>' 
 		+'<div class="col-sm-12">'
