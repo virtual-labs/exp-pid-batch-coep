@@ -4,8 +4,8 @@
 var datasheetCount=0;
 var trendsCount=0;
 let  testCycle = [];
- var time = 1500;
-var selectedValue=1500;
+ var time = 1800;
+var selectedValue=1800;
 var initCnt = 1;
 
 function BatchProcessBottleFillingPipingMimic(){
