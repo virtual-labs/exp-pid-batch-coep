@@ -1,0 +1,134 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the primary function of a Programmable Logic Controller (PLC) in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "To control the flow of materials",
+        "b": "To monitor the temperature of the product",
+        "c": "To automate the production process",
+        "d": "To measure the volume of the product"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which type of sensor is commonly used to measure the level of a liquid in a tank?",
+      "answers": {
+        "a": "Capacitive level sensor",
+        "b": "Ultrasonic level sensor",
+        "c": "Radar level sensor",
+        "d": "All"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of a batch recipe in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "To define the sequence of operations",
+        "b": "To specify the ingredients and quantities",
+        "c": "To set the temperature and pressure",
+        "d": "To monitor the production process"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the primary advantage of using a PLC-based control system in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "Increased production capacity",
+        "b": "Improved product quality",
+        "c": "Reduced labor costs",
+        "d": "Increased flexibility and accuracy"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the term for the process of filling a bottle with a specific quantity of product?",
+      "answers": {
+        "a": "Filling",
+        "b": "Bottling",
+        "c": "Dispensing",
+        "d": "Metering"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	
+	
+	
+	{
+      "question": "What type of valve is commonly used to control the flow of product in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "Gate valve",
+        "b": "Ball valve",
+        "c": "Butterfly valve",
+        "d": "Solenoid valve"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of an alarm system in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "To notify operators of production milestones",
+        "b": "To alert operators of potential safety hazards",
+        "c": "To monitor the production process",
+        "d": "To control the flow of materials"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the term for the process of preparing a batch of product for filling into bottles?",
+      "answers": {
+        "a": "Blending",
+        "b": "Mixing",
+        "c": "Compounding",
+        "d": "Formulation"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What type of pump is commonly used to transfer product in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "Centrifugal pump",
+        "b": "Positive displacement pump",
+        "c": "Diaphragm pump",
+        "d": "Peristaltic pump"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What is the primary safety consideration in a batch and bottle filling pilot plant?",
+      "answers": {
+        "a": "Electrical safety",
+        "b": "Fire safety",
+        "c": "Chemical safety",
+        "d": "All mentioned"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+	
+  
+  
+  
+  ]
+}
